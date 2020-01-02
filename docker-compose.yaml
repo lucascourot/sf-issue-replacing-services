@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  php:
+    build:
+      context: .
+      target: php
+    volumes:
+      - ./:/usr/src/demo:rw,cached
+    command: "tail -f /dev/null"
